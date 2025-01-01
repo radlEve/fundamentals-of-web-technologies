@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    font-family: "Lora", serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff2cd;
+}
+
+header {
+    background-color: #85713f;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    display: inline;
+}
+
+li {
+    display: inline;
+    margin-right: 5vw;
+}
+
+li:last-child {
+    margin-right: 0px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+a:hover {
+    color:rgb(255, 196, 0);
+    font-size: 1.4rem;
+}
+main {
+    padding: 1vh;
+}
+
+.section-about {
+    height: 65vh;
+    background: url(../images/outside.jpg) center/cover no-repeat;
+    border-radius: 1vw;
+    position: relative;
+    margin-bottom: 5vh;
+}
+
+.section-about_block {
+    width: 30vw;
+    height: 25vh;
+    background: linear-gradient(-45deg, rgba(133,113,63, 0.85) 50%, rgba(232, 217, 174, 0.85));
+    border-radius: 1vw;
+    position: relative;
+    padding-top: 1%;
+    top: 54%;
+    left: 50%;
+}
+
+.section-about_border {
+    width: 90%;
+    height: 90%;
+    border: 0.3vw solid black;
+    margin: 0 auto;
+    padding: auto;
+}
+
+.section-about_title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+}
+
+.section-about_text {
+    text-align: center;
+    margin: 1%;
+}
+
+.section-description_icon-box {
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.section-description_icon-box img {
+    height: 20vw;
+    margin-right: 5vw;
+}
+
+.section-description_icon-box img:last-child {
+    margin-right: 0;
+}
+
+.section-description_title {
+    text-align: center;
+    margin: 1vh;
+    font-size: 3rem;
+}
+
+.section-description_span {
+    display: block;
+    color:rgb(164, 126, 0);
+    font-size: 1rem;
+}
+
+.section-description_text {
+    font-size: 1.3rem;
+    margin: 0;
+    text-align: center;
+    width: 75vw;
+    margin: auto;
+}
+
+.section-map_title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 5vh;
+}
+
+iframe {
+    display: block;
+    margin: auto;
+    border-radius: 1vw;
+}
+
+footer {
+    background-color: #161616;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
