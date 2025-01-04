@@ -212,7 +212,16 @@ footer {
 /* Медиа запросы */
 /* Стили для экранов меньше 768px (мобильные устройства) */
 @media (max-width: 767px) {
-     .section-description_icon-box img {
+    li {
+        display: block;
+        margin-right: 0;
+    }
+    .section-about_block {
+        top: 50%;
+        left: 0%;
+    }
+    .section-description_icon-box img {
+        height: 10rem;
         margin-right: 2vw;
     }
   
@@ -222,6 +231,10 @@ footer {
   
     .section-description_text {
       font-size: 1.1rem;
+    }
+
+    .section-gallery {
+        gap: 0.5rem;
     }
   
     .footer-content {
