@@ -1,3 +1,4 @@
+/* Общие стили */
 * {
     box-sizing: border-box;
     font-family: "Lora", serif;
@@ -11,6 +12,7 @@ body {
     min-height: 100vh;
 }
 
+/*Header*/
 header {
     background-color: #85713f;
     text-align: center;
@@ -18,16 +20,15 @@ header {
 
 ul {
     list-style-type: none;
-    display: inline;
 }
 
 li {
     display: inline;
-    margin-right: 5vw;
+    margin-right: 5rem;
 }
 
 li:last-child {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 a {
@@ -44,31 +45,34 @@ main {
     padding: 1vh;
 }
 
+/* Секция About */
 .section-about {
-    height: 65vh;
+    height: 75vh;
     background: url(../images/outside.jpg) center/cover no-repeat;
-    border-radius: 1vw;
+    border-radius: 1rem;
     position: relative;
     margin-bottom: 5vh;
 }
 
 .section-about_block {
-    width: 30vw;
-    height: 25vh;
+    width: 80%;
+    max-width: 400px;
     background: linear-gradient(-45deg, rgba(133,113,63, 0.85) 50%, rgba(232, 217, 174, 0.85));
-    border-radius: 1vw;
+    border-radius: 1rem;
     position: relative;
-    padding-top: 1%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     top: 54%;
     left: 50%;
+    overflow: auto;
 }
 
 .section-about_border {
     width: 90%;
     height: 90%;
-    border: 0.3vw solid black;
+    border: 0.3rem solid black;
+    border-radius: 1rem;
     margin: 0 auto;
-    padding: auto;
 }
 
 .section-about_title {
@@ -82,14 +86,16 @@ main {
     margin: 1%;
 }
 
+/* Секция Description */
 .section-description_icon-box {
     text-align: center;
     margin-bottom: 5vh;
 }
 
 .section-description_icon-box img {
-    height: 20vw;
-    margin-right: 5vw;
+    height: 20rem;
+    width: auto;
+    margin-right: 5rem;
 }
 
 .section-description_icon-box img:last-child {
@@ -116,11 +122,12 @@ main {
     margin: auto;
 }
 
+/* Секция Gallery */
 .section-gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Создаем 3 столбца */
-    grid-template-rows: repeat(2, 1fr);    /* Создаем 2 строки */
-    gap: 10px;                             /* Задаём отступы */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
     max-width: 80vw;
     margin: 2rem auto;
 }
@@ -130,7 +137,7 @@ main {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    border-radius: 1vw;
+    border-radius: 1rem;
 }
 
 .section-gallery_item img {
@@ -151,18 +158,20 @@ main {
     grid-row: 2 / span 1
 }
 
+/* Секция Map */
 .section-map_title {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 5vh;
+    margin-bottom: 2rem;
 }
 
 iframe {
     display: block;
     margin: auto;
-    border-radius: 1vw;
+    border-radius: 1rem;
 }
 
+/* Footer */
 footer {
     background-color: #423820;
     color: white;
@@ -199,3 +208,48 @@ footer {
   font-size: 0.8rem;
   color: lightgray;
 }
+
+/* Медиа запросы */
+/* Стили для экранов меньше 768px (мобильные устройства) */
+@media (max-width: 767px) {
+     .section-description_icon-box img {
+        margin-right: 2vw;
+    }
+  
+    .section-description_title {
+      font-size: 2.5rem;
+    }
+  
+    .section-description_text {
+      font-size: 1.1rem;
+    }
+  
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+  
+    .footer-icons {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+  }
+  
+  
+  /* Стили для экранов от 768px до 1023px (планшеты) */
+  @media (min-width: 768px) and (max-width: 1023px) {  
+     .section-description_icon-box img {
+      margin-right: 4vw;
+    }
+  
+  .section-description_title {
+      font-size: 2.8rem;
+    }
+  
+    .section-description_text {
+      font-size: 1.2rem;
+    }
+  }
+  
