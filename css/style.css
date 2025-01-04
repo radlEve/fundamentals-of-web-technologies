@@ -15,11 +15,20 @@ body {
 /*Header*/
 header {
     background-color: #85713f;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+nav {
+text-align: center;
 }
 
 ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 li {
@@ -43,6 +52,10 @@ a:hover {
 }
 main {
     padding: 1vh;
+}
+
+.logo-style {
+    display: inline;
 }
 
 /* Секция About */
@@ -217,7 +230,7 @@ footer {
         margin-right: 0;
     }
     .section-about_block {
-        top: 50%;
+        top: 25%;
         left: 0%;
     }
     .section-description_icon-box img {
