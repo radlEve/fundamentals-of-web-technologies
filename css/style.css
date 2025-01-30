@@ -48,7 +48,6 @@ a {
 
 a:hover {
     color:rgb(255, 196, 0);
-    font-size: 1.4rem;
 }
 main {
     padding: 1vh;
@@ -72,11 +71,12 @@ main {
     max-width: 400px;
     background: linear-gradient(-45deg, rgba(133,113,63, 0.85) 50%, rgba(232, 217, 174, 0.85));
     border-radius: 1rem;
-    position: relative;
+    position: absolute;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    top: 54%;
+    top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%); /* Добавляем это */
     overflow: auto;
 }
 
@@ -106,7 +106,7 @@ main {
 }
 
 .section-description_icon-box img {
-    height: 20rem;
+    max-height: 20rem;
     width: auto;
     margin-right: 5rem;
 }
@@ -229,13 +229,12 @@ footer {
         display: block;
         margin-right: 0;
     }
-    .section-about_block {
-        top: 25%;
-        left: 0%;
-    }
     .section-description_icon-box img {
         height: 10rem;
-        margin-right: 2vw;
+        margin-right: 2rem;
+    }
+    .section-description_icon-box img:first-child {
+        margin-left: 2rem;
     }
   
     .section-description_title {
@@ -244,10 +243,22 @@ footer {
   
     .section-description_text {
       font-size: 1.1rem;
+      text-align: justify;
     }
 
     .section-gallery {
+        grid-template-columns: 1fr;
         gap: 0.5rem;
+    }
+
+    .section-gallery_item {
+        grid-column: auto;
+        grid-row: auto;
+        max-height: 20vh;
+    }
+
+    iframe {
+        max-height: 300px;
     }
   
     .footer-content {
@@ -261,21 +272,30 @@ footer {
       margin-right: 0;
       margin-bottom: 5px;
     }
-  }
+}
   
   
-  /* Стили для экранов от 768px до 1023px (планшеты) */
-  @media (min-width: 768px) and (max-width: 1023px) {  
-     .section-description_icon-box img {
-      margin-right: 4vw;
+/* Стили для экранов от 768px до 1023px (планшеты) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .section-description_icon-box img:first-child {
+        margin-left: 5rem;
     }
-  
-  .section-description_title {
-      font-size: 2.8rem;
+
+    .section-description_title {
+        font-size: 2.8rem;
     }
-  
+
     .section-description_text {
-      font-size: 1.2rem;
+        font-size: 1.2rem;
     }
-  }
+
+    .section-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .item3, .item4 {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
   
