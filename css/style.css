@@ -246,6 +246,15 @@ footer {
       text-align: justify;
     }
 
+    @media (max-width: 370px) {
+        .section-description_icon-box img {
+            margin-right: 1rem;
+        }
+        .section-description_icon-box img:first-child {
+            margin-left: 1rem;
+        }
+    }
+
     .section-gallery {
         grid-template-columns: 1fr;
         gap: 0.5rem;
